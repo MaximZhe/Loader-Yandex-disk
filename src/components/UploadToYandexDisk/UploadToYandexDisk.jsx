@@ -33,17 +33,16 @@ const FileUploader = ({ idToken }) => {
         });
         setSuccessfully(true);
         console.log(`File ${file.name} uploaded successfully.`);
-        
+        setSuccessfully(false);
       } catch (error) {
         setIsloading(false);
         console.error(`Error uploading file ${file.name}:`, error);
       }
-      finally {
-        setSuccessfully(false);
-      }
+      
     });
-
+    
     setSelectedFiles([]);
+   
   };
 
   const handleFileSelection = (event) => {
