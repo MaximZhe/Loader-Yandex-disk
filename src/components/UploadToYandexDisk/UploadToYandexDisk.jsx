@@ -37,6 +37,9 @@ const FileUploader = ({ idToken }) => {
         setIsloading(false);
         console.error(`Error uploading file ${file.name}:`, error);
       }
+      finally{
+        setSuccessfully(false);
+      }
       
     });
     
@@ -55,7 +58,7 @@ const FileUploader = ({ idToken }) => {
 
   return (
     <div>
-      {idToken !== "" || successfully === false ? (
+      {idToken !== "" ? (
         <div>
           {successfully === false ? (
             <div>
