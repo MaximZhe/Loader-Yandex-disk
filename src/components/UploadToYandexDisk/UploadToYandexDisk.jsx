@@ -38,7 +38,10 @@ const FileUploader = ({ idToken }) => {
         console.error(`Error uploading file ${file.name}:`, error);
       }
       finally{
-        setSuccessfully(false);
+        setTimeout(() => {
+          setSuccessfully(false);
+        }, 2000)
+        
       }
       
     });
