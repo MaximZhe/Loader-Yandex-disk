@@ -40,6 +40,7 @@ const FileUploader = ({ idToken }) => {
       finally{
         setTimeout(() => {
           setSuccessfully(false);
+          setIsloading(false);
         }, 2000)
         
       }
