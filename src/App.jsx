@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 function App() {
   const [idToken, setIdToken] = useState("");
   function onload() {
-    window.YaSendSuggestToken("https://maximzhe.github.io/", {
+    window.YaSendSuggestToken("https://maximzhe.github.io/Loader-Yandex-disk/", {
     kek: true,
     });
     }
@@ -15,9 +15,9 @@ function App() {
         {
           client_id: `${import.meta.env.VITE_API_KEY}`,
           response_type: "token",
-          redirect_uri: "https://maximzhe.github.io/",
+          redirect_uri: "https://maximzhe.github.io/Loader-Yandex-disk/",
         },
-        "https://maximzhe.github.io/",
+        "https://maximzhe.github.io/Loader-Yandex-disk/",
         {
           view: "button",
           parentId: "container",
