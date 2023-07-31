@@ -55,7 +55,7 @@ const FileUploader = ({ idToken }) => {
 
   return (
     <div>
-      {idToken !== "" ? (
+      {idToken !== "" || successfully === false ? (
         <div>
           {successfully === false ? (
             <div>
@@ -63,7 +63,7 @@ const FileUploader = ({ idToken }) => {
                 <input type="file" multiple onChange={handleFileSelection} />
                 <button onClick={handleFileUpload}>Upload</button>
               </div>
-              {isloading === true ? <p>loading</p> : null}
+              {isloading === true ? <p>loading...</p> : null}
             </div>
           ) : (
             <p>Успешно отправлено!</p>
