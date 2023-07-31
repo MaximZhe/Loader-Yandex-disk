@@ -1,14 +1,17 @@
-import UploadToYandexDisk from './components/UploadToYandexDisk/UploadToYandexDisk';
+import UploadToYandexDisk from "./components/UploadToYandexDisk/UploadToYandexDisk";
 import "./App.css";
 import { useEffect, useState } from "react";
 
 function App() {
   const [idToken, setIdToken] = useState("");
   function onload() {
-    window.YaSendSuggestToken("https://maximzhe.github.io/Loader-Yandex-disk/", {
-    kek: true,
-    });
-    }
+    window.YaSendSuggestToken(
+      "https://maximzhe.github.io/Loader-Yandex-disk/",
+      {
+        kek: true,
+      }
+    );
+  }
   useEffect(() => {
     function load() {
       window.YaAuthSuggest.init(
@@ -28,18 +31,15 @@ function App() {
         }
       )
         .then(({ handler }) => handler())
-        .then((data) => setIdToken(data.access_token),onload())
+        .then((data) => setIdToken(data.access_token), onload())
         .catch((error) => console.log("Обработка ошибки", error));
     }
     load();
   }, [idToken]);
   return (
-    
     <>
       <div>
-        
-      <UploadToYandexDisk idToken={idToken}/>
-        
+        <UploadToYandexDisk idToken={idToken} />
       </div>
     </>
   );
