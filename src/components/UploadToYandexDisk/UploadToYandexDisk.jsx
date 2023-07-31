@@ -33,9 +33,13 @@ const FileUploader = ({ idToken }) => {
         });
         setSuccessfully(true);
         console.log(`File ${file.name} uploaded successfully.`);
+        
       } catch (error) {
         setIsloading(false);
         console.error(`Error uploading file ${file.name}:`, error);
+      }
+      finally {
+        setSuccessfully(false);
       }
     });
 
