@@ -1,8 +1,17 @@
-# React + Vite
+# Реализовать компонент для загрузки файлов на Яндекс диск от 1 и более файлов.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ОБЩИЕ ТРЕБОВАНИЯ: 
 
-Currently, two official plugins are available:
+- Приложение должно работать в chrome и firefox. 
+- Код должен быть чистым и читабельным. 
+- Код должен быть отформатирован в едином стиле. 
+- Приложение должно быть написано на react.
+- Приложение должно быть адаптировано под различные устройства.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ОПИСАНИЕ ПРИЛОЖЕНИЯ:
+- При входе на страницу отображается кнопка для авторизации с помощью Яндекс аккаунта.
+- После авторизации появляется возможность добавить необходимые файлы на Яндекс диск.
+
+
+
+
